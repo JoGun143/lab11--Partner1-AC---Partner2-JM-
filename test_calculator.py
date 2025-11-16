@@ -1,13 +1,23 @@
 import unittest
+import calculator
+import pytest
+import math
 from calculator import *
 
 class TestCalculator(unittest.TestCase):
-    ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+        """"""# https://github.com/JoGun143/lab11--Partner1-AC---Partner2-JM-
+    # Partner 1: <Ameerul Chowdhury>
+    # Partner 2: <Joseph Mauldin>
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
+def test_add():
+    assert calculator.add(2, 3) == 5
+    assert calculator.add(-1, 1) == 0
+    assert calculator.add(0, 0) == 0
+
+def test_subtract():
+    assert calculator.sub(5, 3) == 2
+    assert calculator.sub(0, 5) == -5
+    assert calculator.sub(-3, -2) == -1
     # ##########################
 
     ######## Partner 1
@@ -19,18 +29,19 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
-    #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
-    #     fill in code
-
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
-
-    # def test_log_invalid_base(self): # 1 assertion
-    #     # use same technique from test_divide_by_zero
-    #     fill in code
+def test_divide_by_zero():
+    with pytest.raises(ZeroDivisionError):
+        calculator.div(5, 0)
+def test_logarithm():
+    assert calculator.log(8, 2) == 3
+    assert calculator.log(100, 10) == 2
+def test_log_invalid_base():
+    with pytest.raises(ValueError):
+        calculator.log(-1, 10)
+    with pytest.raises(ValueError):
+        calculator.log(10, 1)
+    with pytest.raises(ValueError):
+        calculator.log(10, -2)
     # ##########################
     
     ######## Partner 1
