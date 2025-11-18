@@ -23,12 +23,16 @@ def subtract(a, b):
 
 def mul(a, b):
     return a * b
-
+def multiply(a, b):
+    return a * b
 def div(a, b):
     if a == 0:
         raise ZeroDivisionError("Cannot divide by zero.")
     return b / a
-
+def divivde(a, b):
+    if a == 0:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return b / a
 def log(a, b):
     if a <= 0:
         raise ValueError("Argument must be positive.")
