@@ -25,6 +25,14 @@ def div(a, b):
         raise ZeroDivisionError("Cannot divide by zero.")
     return a / b
 
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return a / b
+
 def logarithm(a, b):
     if a <= 0:
         raise ValueError("Logarithm argument must be positive.")
