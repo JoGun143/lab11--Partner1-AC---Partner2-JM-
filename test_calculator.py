@@ -25,15 +25,15 @@ class TestPartner2(unittest.TestCase):
             calculator.logarithm(-1, 10)
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(5, 0)
+            calculator.div(5, 0)
 ############ Partner 1 ############
 class TestPartner1(unittest.TestCase):
     def test_multiply(self):
-        self.assertEqual(calculator.multiply(3, 4), 12)
-        self.assertEqual(calculator.multiply(-2, 5), -10)
+        self.assertEqual(calculator.mul(3, 4), 12)
+        self.assertEqual(calculator.mul(-2, 5), -10)
     def test_divide(self):
-        self.assertEqual(calculator.divide(10, 2), 5)
-        self.assertEqual(calculator.divide(9, 3), 3)
+        self.assertEqual(calculator.div(10, 2), 5)
+        self.assertEqual(calculator.div(9, 3), 3)
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             calculator.logarithm(-1, 10)
