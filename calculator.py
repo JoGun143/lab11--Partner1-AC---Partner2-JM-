@@ -26,11 +26,11 @@ def mul(a, b):
 def multiply(a, b):
     return a * b
 def div(a, b):
-    if b == 0:
+    if a == 0 or b == 0:
         raise ZeroDivisionError("Cannot divide by zero.")
     return a / b
 def divide(a, b):
-    if b == 0:
+    if a == 0 or b == 0:
         raise ZeroDivisionError("Cannot divide by zero.")
     return a / b
 def log(a, b):
